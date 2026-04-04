@@ -1,0 +1,203 @@
+---
+name: Falklands - 5JS TRAINING FALKANS 2026
+theater: Falklands
+authors: Xifu
+recommended_player_faction: 5JS_SPAIN_2024
+recommended_enemy_faction: Redfor (Russia) 2010
+description:
+  <p>CAMPAÑA DE ENTRENAMIENTO.</p>
+miz: 5js_training_falkans.miz
+performance: 1
+advanced_iads: true
+recommended_start_date: 2024-03-25 08:00:00
+recommended_player_money: 2000
+recommended_enemy_money: 2000
+recommended_player_income_multiplier: 0.5
+recommended_enemy_income_multiplier: 0.5
+version: "10.8"
+squadrons:
+  #BLUE
+  #Punta Arenas (50)
+  9:
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-15E Strike Eagle (Suite 4+)      
+      size: 12  
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F/A-18C Hornet (Lot 20)
+      size: 4  
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-16CM Fighting Falcon (Block 50)
+      size: 18  
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - A-10C Thunderbolt II (Suite 7)      
+      size: 4 
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - AV-8B Harrier II Night Attack    
+      size: 4      
+    - primary: Transport
+      secondary: any
+      aircraft:
+        - UH-1H Iroquois
+      size: 4  
+    - primary: Refueling
+      aircraft:
+        - KC-135 Stratotanker
+      size: 1 
+    - primary: Refueling
+      aircraft:
+        - KC-135 Stratotanker MPRS 
+      size: 1
+    - primary: AEW&C
+      aircraft:
+        - E-3A 
+      size: 1
+  #POUVENIR (7)
+  18:
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-15E Strike Eagle (Suite 4+)      
+      size: 3  
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-16CM Fighting Falcon (Block 50)
+      size: 4  
+  #puerto natale (4)
+  13:
+    - primary: CAS
+      secondary: air-to-ground
+      aircraft:
+        - AH-64D Apache Longbow
+      size: 3
+    - primary: Transport
+      aircraft:
+        - UH-1H Iroquois
+      size: 1    
+  #Blue CV
+  Blue-CV:
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F/A-18C Hornet (Lot 20)
+      size: 20 
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-14B Tomcat
+      size: 20     
+    - primary: AEW&C
+      aircraft:
+        - E-2C Hawkeye
+      size: 1  
+    - primary: Refueling
+      aircraft:
+        - S-3B Tanker
+      size: 1 
+  #Red team   
+  #air base Red
+  AIR BASE RED:
+    - primary: BARCAP
+      aircraft:
+        - Su-27 Flanker-B
+      size: 12
+    - primary: BARCAP
+      aircraft:
+        - MiG-29S Fulcrum-C
+      size: 12
+    - primary: DEAD
+      secondary: any
+      aircraft: 
+        - Su-33 Flanker-D
+      size: 12
+    - primary: BARCAP
+      aircraft:
+        - MiG-21bis Fishbed-N
+      size: 12  
+    - primary: AEW&C
+      aircraft:
+        - A-50
+      size: 1  
+    - primary: Refueling
+      aircraft:
+        - IL-78M
+      size: 1  
+    - primary: Strike
+      secondary: air-to-ground
+      aircraft:
+        - B-1B Lancer
+      size: 1  
+  #Rio Gallegros (24)
+  5:
+    - primary: BARCAP
+      aircraft:
+        - Su-27 Flanker-B
+      size: 6
+    - primary: DEAD
+      secondary: any
+      aircraft: 
+        - Su-33 Flanker-D
+      size: 6
+    - primary: BARCAP
+      aircraft:
+        - MiG-21bis Fishbed-N
+      size: 8  
+    - primary: AEW&C
+      aircraft:
+        - A-50
+      size: 1  
+    - primary: Refueling
+      aircraft:
+        - IL-78M
+      size: 1  
+    - primary: Strike
+      secondary: air-to-ground
+      aircraft:
+        - B-1B Lancer
+      size: 1
+  #El calafate (10)
+  14:
+    - primary: BARCAP
+      aircraft:
+        - MiG-29S Fulcrum-C
+      size: 4
+    - primary: BARCAP
+      aircraft:
+        - MiG-21bis Fishbed-N
+      size: 4    
+    - primary: AEW&C
+      aircraft:
+        - A-50
+      size: 1  
+    - primary: Refueling
+      aircraft:
+        - IL-78M
+      size: 1  
+  #rio turbio (3)
+  20:
+    - primary: CAS
+      secondary: air-to-ground
+      aircraft:
+        - AH-64D Apache Longbow
+      size: 3
+  #comandante luis (9)
+  16:
+    - primary: BARCAP
+      aircraft:
+        - MiG-29S Fulcrum-C
+      size: 8
+    - primary: AEW&C
+      aircraft:
+        - A-50
+      size: 1  
+   

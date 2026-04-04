@@ -1,0 +1,316 @@
+---
+name: Afghanistan - 5JS AFGANISTAN TRAINING 2026
+theater: Afghanistan
+authors: XIFU
+recommended_player_faction: 5JS_SPAIN_2024
+recommended_enemy_faction: Redfor (Russia) 2020
+description:
+  <p><strong>5JS TRAINING EXERCISE 2026.</p>
+miz: 5js_afganistan_2026.miz
+performance: 1
+recommended_start_date: 2021-08-22 05:00:00
+version: "10.8"
+settings:
+  squadron_start_full: true
+squadrons:
+  #Bagram
+  16:
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-15E Strike Eagle (Suite 4+)   
+      size: 8 
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-4E-45MC Phantom II      
+      size: 8  
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F/A-18C Hornet (Lot 20)
+      size: 12  
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-16CM Fighting Falcon (Block 50)
+      size: 12  
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - AV-8B Harrier II Night Attack
+      size: 4  
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - A-10C Thunderbolt II (Suite 7)  
+      size: 4 
+    - primary: Transport
+      secondary: any
+      aircraft:
+        - UH-1H Iroquois
+      size: 2  
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - AH-64D Apache Longbow 
+      size: 4  
+    - primary: Refueling
+      aircraft:
+        - KC-135 Stratotanker
+      size: 1 
+    - primary: Refueling
+      aircraft:
+        - KC-135 Stratotanker MPRS 
+      size: 1
+    - primary: AEW&C
+      aircraft:
+        - E-3A 
+      size: 1 
+    - primary: Strike
+      secondary: any
+      aircraft:
+        - B-52H Stratofortress       
+      size: 2
+  #Kabul
+  17:
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-15E Strike Eagle (Suite 4+)   
+      size: 8 
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-4E-45MC Phantom II      
+      size: 8  
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F/A-18C Hornet (Lot 20)
+      size: 12  
+    - primary: BARCAP
+      secondary: any
+      aircraft:
+        - F-16CM Fighting Falcon (Block 50)
+      size: 12  
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - AV-8B Harrier II Night Attack
+      size: 4  
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - A-10C Thunderbolt II (Suite 7)  
+      size: 4 
+    - primary: Transport
+      secondary: any
+      aircraft:
+        - UH-1H Iroquois
+      size: 2  
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - AH-64D Apache Longbow 
+      size: 4  
+    - primary: Refueling
+      aircraft:
+        - KC-135 Stratotanker
+      size: 1 
+    - primary: Refueling
+      aircraft:
+        - KC-135 Stratotanker MPRS 
+      size: 1
+    - primary: AEW&C
+      aircraft:
+        - E-3A 
+      size: 1 
+    - primary: Strike
+      secondary: any
+      aircraft:
+        - B-52H Stratofortress       
+      size: 2
+  #FOB SALERNO
+  23:
+    - primary: CAS
+      secondary: air-to-ground
+      aircraft:
+        - AH-64D Apache Longbow
+      size: 10 
+    - primary: Transport
+      aircraft:
+        - UH-1H Iroquois
+      size: 10
+  #Sharana
+  22:
+    - primary: CAS
+      secondary: air-to-ground
+      aircraft:
+        - AH-64D Apache Longbow
+      size: 6 
+    - primary: Transport
+      aircraft:
+        - UH-1H Iroquois
+      size: 4 
+  #Ghazni Heliport
+  21:
+    - primary: CAS
+      secondary: any
+      aircraft:
+        - AH-64D Apache Longbow
+      size: 4
+    - primary: Armed Recon
+      secondary: any
+      aircraft:
+        - AH-64D Apache Longbow
+      size: 4
+  #Tarinkot
+  9:
+    - primary: SEAD Escort
+      secondary: any
+      aircraft:
+        - JF-17 Thunder
+      size: 12
+  #Kandahar
+  7:
+    - primary: BARCAP
+      aircraft:
+        - Su-27 Flanker-B
+      size: 12
+    - primary: DEAD
+      secondary: any
+      aircraft: 
+        - Su-33 Flanker-D
+      size: 12
+    - primary: BARCAP
+      aircraft:
+        - MiG-21bis Fishbed-N
+      size: 12  
+    - primary: AEW&C
+      aircraft:
+        - A-50
+      size: 1  
+    - primary: Refueling
+      aircraft:
+        - IL-78M
+      size: 1  
+    - primary: Strike
+      secondary: air-to-ground
+      aircraft:
+        - B-1B Lancer
+      size: 1
+  #JALABAD
+  19:
+    - primary: BARCAP
+      aircraft:
+        - Su-27 Flanker-B
+      size: 12
+    - primary: DEAD
+      secondary: any
+      aircraft: 
+        - Su-33 Flanker-D
+      size: 12
+    - primary: BARCAP
+      aircraft:
+        - MiG-21bis Fishbed-N
+      size: 12  
+    - primary: AEW&C
+      aircraft:
+        - A-50
+      size: 1  
+    - primary: Refueling
+      aircraft:
+        - IL-78M
+      size: 1  
+    - primary: Strike
+      secondary: air-to-ground
+      aircraft:
+        - B-1B Lancer
+      size: 1 
+  #AIR AIRPORT
+  AIR AIRPORT:
+    - primary: BARCAP
+      aircraft:
+        - Su-27 Flanker-B
+      size: 12
+    - primary: DEAD
+      secondary: any
+      aircraft: 
+        - Su-33 Flanker-D
+      size: 12
+    - primary: BARCAP
+      aircraft:
+        - MiG-21bis Fishbed-N
+      size: 12  
+    - primary: AEW&C
+      aircraft:
+        - A-50
+      size: 10  
+    - primary: Refueling
+      aircraft:
+        - IL-78M
+      size: 10  
+    - primary: Strike
+      secondary: air-to-ground
+      aircraft:
+        - B-1B Lancer
+      size: 1       
+  # Kandahar Heliport
+  15:
+    - primary: Air Assault
+      secondary: any
+      aircraft:
+        - Mi-24P Hind-F
+      size: 4
+    - primary: Escort
+      secondary: any
+      aircraft:
+         - Ka-50 Hokum III
+      size: 4
+  #FOB Lagman
+  FOB Lagman:
+    - primary: CAS
+      secondary: any
+      aircraft:
+         - "[CH] Ka-52"
+         - Ka-50 Hokum
+      size: 4
+    - primary: Escort
+      secondary: any
+      aircraft:
+         - "[CH] Mi-28N AH"
+         - Mi-28N Havoc
+      size: 4
+  #Camp Bastion
+  10:
+    - primary: AEW&C
+      aircraft:
+        - A-50
+      size: 2
+    - primary: Refueling
+      aircraft:
+        - IL-78M
+      size: 2
+    - primary: Transport
+      secondary: any
+      aircraft:
+        - IL-76MD
+      size: 2
+    - primary: DEAD
+      secondary: air-to-ground
+      aircraft:
+        - Su-34 Fullback
+      size: 16
+    - primary: BARCAP
+      secondary: air-to-air
+      aircraft:
+        - MiG-29S Fulcrum-C
+      size: 16
+  #Camp Bastion Heliport
+  13:
+    - primary: Transport
+      secondary: any
+      aircraft:
+        - Mi-8MTV2 Hip
+      size: 2
