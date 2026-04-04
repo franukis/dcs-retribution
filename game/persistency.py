@@ -3,6 +3,7 @@ from __future__ import annotations
 import logging
 import pickle
 import shutil
+import json
 from pathlib import Path
 from typing import Optional, TYPE_CHECKING, Any
 
@@ -398,6 +399,37 @@ def load_game(path: str) -> Optional[Game]:
             logging.exception("Invalid Save game")
             return None
 
+def save_mct_export(game: "Game", save_path: str) -> None:
+    from collections import defaultdict
+    from game.theater.player import Player
+
+    coalitions_data: dict = {}
+
+    for player, label in ((Player.BLUE, "blue"), (Player.RED, "red")):
+        bases: dict[str, dict[str, int]] = {}
+
+        for cp in game.theater.control_points_for(player):
+            aircraft_at_base: dict[str, int] = defaultdict(int)
+
+            for squadron in cp.squadrons:
+                count = squadron.owned_aircraft
+                if count <= 0:
+                    continue
+                aircraft_at_base[squadron.aircraft.dcs_id] += count
+
+            if aircraft_at_base:
+                bases[cp.name] = dict(aircraft_at_base)
+
+        coalitions_data[label] = bases
+
+    export = {
+        "turn": game.turn,
+        "coalitions": coalitions_data,
+    }
+
+    mct_path = str(save_path).rsplit(".", 1)[0] + ".mct"
+    with open(mct_path, "w", encoding="utf-8") as f:
+        json.dump(export, f, indent=2, ensure_ascii=False)
 
 def save_game(game: Game) -> bool:
     with logged_duration("Saving game"):
@@ -407,6 +439,12 @@ def save_game(game: Game) -> bool:
                 pickle.dump(game, f)
                 _restore_static_data(game, data)
             shutil.copy(_temporary_save_file(), game.savepath)
+            # -> AÑADIR DESDE AQUÍ
+            try:
+                save_mct_export(game, game.savepath)
+            except Exception:
+                logging.exception("Could not generate .mct export")
+            # <- HASTA AQUÍ
             return True
         except Exception:
             logging.exception("Could not save game")
