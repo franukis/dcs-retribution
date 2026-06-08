@@ -440,10 +440,10 @@ def save_game(game: Game) -> bool:
                 _restore_static_data(game, data)
             shutil.copy(_temporary_save_file(), game.savepath)
             # -> AÑADIR DESDE AQUÍ
-            try:
-                save_mct_export(game, game.savepath)
-            except Exception:
-                logging.exception("Could not generate .mct export")
+            #try:
+                #save_mct_export(game, game.savepath)
+            #except Exception:
+                #logging.exception("Could not generate .mct export")
             # <- HASTA AQUÍ
             return True
         except Exception:

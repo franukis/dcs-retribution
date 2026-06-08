@@ -13,6 +13,9 @@ analysis = Analysis(
         ('resources/nevada.p', 'dcs/terrain/'),
         ('client/build', 'client/build'),
     ],
+	hiddenimports=[
+        'game.missiongenerator.missiongenerator',
+    ],
     hookspath=[],
     runtime_hooks=[],
     excludes=[],
