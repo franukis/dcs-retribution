@@ -161,7 +161,7 @@ class MissionGenerator:
             mct_content = json.dumps(export, indent=2, ensure_ascii=False)
 
             with zipfile.ZipFile(miz_path, "a") as zf:
-                zf.writestr("retribution.mct", mct_content)
+                zf.writestr("MCT/retribution.mct", mct_content)
         except Exception:
             logging.exception("Could not inject .mct into .miz")
 
