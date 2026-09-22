@@ -138,8 +138,37 @@ class MissionGenerator:
         self.generate_warehouses()
         output.parent.mkdir(parents=True, exist_ok=True)
         self.mission.save(output)
+        self._inject_mct_into_miz(output)
 
         return self.unit_map
+
+    def _inject_mct_into_miz(self, miz_path: Path) -> None:
+        """Inject a .mct datacard export file into the generated .miz ZIP."""
+        try:
+            coalitions_data: dict = {}
+            for player, label in ((Player.BLUE, "blue"), (Player.RED, "red")):
+                bases: dict[str, dict[str, int]] = {}
+                for cp in self.game.theater.control_points_for(player):
+                    aircraft_at_base: dict[str, int] = defaultdict(int)
+                    for squadron in cp.squadrons:
+                        count = squadron.owned_aircraft
+                        if count <= 0:
+                            continue
+                        aircraft_at_base[squadron.aircraft.dcs_id] += count
+                    if aircraft_at_base:
+                        bases[cp.name] = dict(aircraft_at_base)
+                coalitions_data[label] = bases
+
+            export = {
+                "turn": self.game.turn,
+                "coalitions": coalitions_data,
+            }
+            mct_content = json.dumps(export, indent=2, ensure_ascii=False)
+
+            with zipfile.ZipFile(miz_path, "a") as zf:
+                zf.writestr("retribution.mct", mct_content)
+        except Exception:
+            logging.exception("Could not inject .mct into .miz")
 
     @staticmethod
     def _configure_react_to_threat_for_ew_jamming_packages(
