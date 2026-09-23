@@ -198,7 +198,7 @@ class QLiberationWindow(QMainWindow):
         self.ukraineAction = QAction("&Ukraine", self)
         self.ukraineAction.setIcon(CONST.ICONS["Ukraine"])
         self.ukraineAction.triggered.connect(
-            lambda: webbrowser.open_new_tab("https://shdwp.github.io/ukraine/")
+            lambda: webbrowser.open_new_tab("http://gv5js.com")
         )
 
         self.pretenseLinkAction = QAction("&DCS: Pretense", self)
