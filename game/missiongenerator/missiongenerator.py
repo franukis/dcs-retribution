@@ -5,6 +5,11 @@ from datetime import datetime
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, cast
 
+import zipfile 
+import json
+from collections import defaultdict
+from game.theater.player import Player
+
 import dcs.lua
 from dcs import Mission, Point
 from dcs.coalition import Coalition
